@@ -37,7 +37,7 @@ async def on_ready():
 
 @bot.command()
 async def addfeed(ctx, url: str):
-    # TODO: save on sqlite3?
+    # TODO: save on sqlite3? user info, channel info
     print("addfeed called")
     if url not in rss_feeds:
         rss_feeds.append(url)
