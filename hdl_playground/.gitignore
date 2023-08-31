@@ -1,0 +1,6 @@
+*.vcd
+*.vvp
+*.out
+parsetab.py
+.pytest_cache
+__pycache__

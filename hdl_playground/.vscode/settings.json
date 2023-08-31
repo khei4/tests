@@ -1,0 +1,8 @@
+{
+    "terminal.integrated.env.osx": {
+        "PYTHONPATHY" : "/Users/khei4/git/veriloggen"
+    },
+    "python.analysis.extraPaths": [
+        "/Users/khei4/git/veriloggen"
+    ],
+}
