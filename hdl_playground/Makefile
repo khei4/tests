@@ -1,5 +1,10 @@
-run-wave-sim:
+run-wave-sim-sv:
 	iverilog tmp.v -o tmp.vvp -g 2012
+	vvp tmp.vvp
+	gtkwave tmp.vcd
+
+run-wave-sim:
+	iverilog tmp.v -o tmp.vvp
 	vvp tmp.vvp
 	gtkwave tmp.vcd
 
