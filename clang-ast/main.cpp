@@ -113,7 +113,6 @@ const StatementMatcher ForCondMatcher =
         hasOperatorName("<"),
         hasLHS(ignoringParenImpCasts(
             declRefExpr(to(varDecl(hasType(isInteger())).bind("loopVar"))))),
-        // hasRHS(expr(hasType(isInteger()))),
         hasParent(forStmt(hasCondition(expr().bind("forCondition")))))
         .bind("forCondition");
 
