@@ -1,0 +1,3 @@
+/Users/khei4/git/tests/z3withcpp/build/CMakeFiles/main.dir
+/Users/khei4/git/tests/z3withcpp/build/CMakeFiles/edit_cache.dir
+/Users/khei4/git/tests/z3withcpp/build/CMakeFiles/rebuild_cache.dir
