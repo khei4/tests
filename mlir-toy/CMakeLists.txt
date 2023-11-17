@@ -46,11 +46,21 @@ include_directories(${LLVM_INCLUDE_DIRS})
 include_directories(${MLIR_INCLUDE_DIRS})
 include_directories(${STANDALONE_SOURCE_DIR}/include)
 include_directories(${STANDALONE_BINARY_DIR}/include)
+include_directories(${STANDALONE_BINARY_DIR}/mlir)
+
+add_subdirectory(mlir)
+
 add_executable(toyc 
     toyc.cpp
     parser/AST.cpp
     mlir/MLIRGen.cpp
     mlir/Dialect.cpp   
+    mlir/ToyCombine.cpp
+)
+add_dependencies(
+    toyc
+    ToyCh2OpsIncGen
+    ToyCh3CombineIncGen
 )
 target_link_libraries(toyc
   PUBLIC
