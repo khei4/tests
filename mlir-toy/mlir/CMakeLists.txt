@@ -6,6 +6,7 @@ include_directories(${LLVM_INCLUDE_DIRS})
 include_directories(${MLIR_INCLUDE_DIRS})
 include_directories(${STANDALONE_SOURCE_DIR}/include)
 include_directories(${STANDALONE_BINARY_DIR}/include)
+include_directories(${STANDALONE_BINARY_DIR}/mlir)
 
 set(LLVM_TARGET_DEFINITIONS ToyCombine.td)
 mlir_tablegen(ToyCombine.inc -gen-rewriters)

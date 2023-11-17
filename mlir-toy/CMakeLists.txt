@@ -55,19 +55,24 @@ add_executable(toyc
     parser/AST.cpp
     mlir/MLIRGen.cpp
     mlir/Dialect.cpp   
+    mlir/ShapeInferencePass.cpp
     mlir/ToyCombine.cpp
 )
 add_dependencies(
     toyc
     ToyCh2OpsIncGen
     ToyCh3CombineIncGen
+    ToyCh4ShapeInferenceInterfaceIncGen
 )
 target_link_libraries(toyc
   PUBLIC
     LLVM
     MLIRAnalysis
+    MLIRCastInterfaces
+    MLIRCallInterfaces
     MLIRIR
     MLIRParser
+    MLIRPass
     MLIRSideEffectInterfaces
     MLIRTransforms   
 ) 
