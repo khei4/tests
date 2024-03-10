@@ -3,7 +3,6 @@ import os
 import argparse
 from urllib.parse import urlparse, parse_qs, urlunparse
 
-# 環境変数からDropboxアクセストークンを取得
 DROPBOX_ACCESS_TOKEN = os.environ.get("DROPBOX_ACCESS_TOKEN")
 
 
@@ -29,7 +28,8 @@ def get_dropbox_links(token, sort_by):
                     else:
                         print(f"共有リンクの取得に失敗しました。エラー: {err}")
                         continue
-                # リンクとメタデータを保存
+                link = link.replace("www.dropbox.com", "dl.dropboxusercontent.com")
+                link = link.replace("?dl=0", "")
                 links.append((entry, link))
 
         # ソート基準に応じてソート
